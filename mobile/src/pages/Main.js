@@ -38,9 +38,9 @@ function Main({ navigation }){
 
   useEffect(
     ()=>{
-      subscribeToNewDevs(dev =>setDevs([...devs, dev]))
+      subscribeToNewDevs(dev =>setDevs([...devs, dev]));
     }
-    ,[devs])
+    ,[devs]);
 
   if(!currentRegion){
     return null;
@@ -55,7 +55,7 @@ function Main({ navigation }){
       longitude,
       techs,
     );
-  }
+  };
 
   async function loadDevs(){
     const {latitude, longitude} = currentRegion;
